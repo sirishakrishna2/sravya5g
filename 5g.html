@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    
+    .s3 img{
+      border: 1px solid;
+      border-radius: 10px;
+      margin-right: 100px;
+      margin-top: 30px;
+      margin-left: 40px;
+      
+    }
+
+    .s4 img{
+      border: 1px solid;
+      border-radius: 10px;
+      margin-right: 100px;
+      margin-top: 30px;
+      margin-left: 40px;
+      margin-bottom: 30px;
+      
+    }
+    .s1 p{
+      font-size: 20px;
+      font-style:italic;
+    }
+    .s2 p{
+      font-size: 20px;
+      font-style:italic;
+    }
+     * {box-sizing: border-box}
+        body {font-family: Verdana, sans-serif; margin:0}
+        .mySlides {display: none}
+        img {vertical-align: middle;}
+        
+        /* Slideshow container */
+        .slideshow-container {
+          max-width: 1000px;
+          position: relative;
+          margin: auto;
+        }
+        
+        /* Next & previous buttons */
+        .prev, .next {
+          cursor: pointer;
+          position: absolute;
+          top: 50%;
+          width: auto;
+          padding: 16px;
+          margin-top: -22px;
+          color: white;
+          font-weight: bold;
+          font-size: 18px;
+          transition: 0.6s ease;
+          border-radius: 0 3px 3px 0;
+          user-select: none;
+        }
+        
+        /* Position the "next button" to the right */
+        .next {
+          right: 0;
+          border-radius: 3px 0 0 3px;
+        }
+        
+        /* On hover, add a black background color with a little bit see-through */
+        .prev:hover, .next:hover {
+          background-color: rgba(0,0,0,0.8);
+        }
+        
+        /* Caption text */
+        .text {
+          color: #f2f2f2;
+          font-size: 15px;
+          padding: 8px 12px;
+          position: absolute;
+          bottom: 8px;
+          width: 100%;
+          text-align: center;
+        }
+        
+        /* Number text (1/3 etc) */
+        .numbertext {
+          color: #f2f2f2;
+          font-size: 12px;
+          padding: 8px 12px;
+          position: absolute;
+          top: 0;
+        }
+        
+        /* The dots/bullets/indicators */
+        .dot {
+          cursor: pointer;
+          height: 15px;
+          width: 15px;
+          margin: 0 2px;
+          background-color: #bbb;
+          border-radius: 50%;
+          display: inline-block;
+          transition: background-color 0.6s ease;
+        }
+        
+        .active, .dot:hover {
+          background-color: #717171;
+        }
+        
+        /* Fading animation */
+        .fade {
+          animation-name: fade;
+          animation-duration: 1.5s;
+        }
+        
+        @keyframes fade {
+          from {opacity: .4} 
+          to {opacity: 1}
+        }
+        
+        /* On smaller screens, decrease text size */
+        @media only screen and (max-width: 300px) {
+          .prev, .next,.text {font-size: 11px}
+        }
+
+       
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary" style="position:sticky;top:0%;">
+
+    <nav class="navbar bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img  style="height:100px;width:100px;"alt="Logo" width="30" height="24" class="d-inline-block align-text-top" src="https://s7d1.scene7.com/is/image/dmqualcommprod/5g-topper?$QC_Responsive$&fmt=png-alpha">
+           
+            
+          </a>
+        </div>
+      </nav>
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">HOME</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Products & Solutions
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">5G core</a></li>
+            <li><a class="dropdown-item" href="#">5G RAN</a></li>
+            <li><a class="dropdown-item" href="#">5G Transport</a></li>
+          </ul>
+        </div>
+
+        <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Discover
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">5G</li>
+            <li><a class="dropdown-item" href="#">CI/CD</a></li>
+            <li><a class="dropdown-item" href="#"></a>Cloud native</li>
+          </ul>
+        </div>
+            
+        <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Tranforming enterprises
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Transforming enterprises</a></li>
+            <li><a class="dropdown-item" href="#">Join our ecosystem</a></li>
+            <li><a class="dropdown-item" href="#">Automotive</a></li>
+          </ul>
+        </div>
+
+            <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            FUture technologies
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Game-Changig technologies</a></li>
+            <li><a class="dropdown-item" href="#">New world of possibilities</a></li>
+            <li><a class="dropdown-item" href="#">Network architecture</a></li>
+          </ul>
+        </div>
+
+            <div class="dropdown">
+              <a href="sign in.html"><button class="btn btn-secondary dropdown-toggle" type="button"  aria-expanded="false">SIGN IN</button></a>
+            </div>
+          
+        </div>
+      </div>
+    </nav>
+
+<div>
+    <div style="border: 1px solid;background-color:wheat; margin: 20px;display:flex;border-radius: 10px;border-color: black;">
+      <div>
+      <center><img style="margin: 30px;margin-top: 100px;"src="data:image/jpeg;base64,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" >
+            </center></div>
+       <div>   
+      <h1 style="font-style:inherit;margin: 20px;color:green">INTRODUCTION</h1>
+      <p style="margin:20px;color:purple">In telecommunications, 5G is the fifth-generation technology standard for cellular networks, which cellular phone companies began deploying worldwide in 2019, and is the successor to 4G technology that provides connectivity to most current mobile phones.
+        Like its predecessors, 5G networks are cellular networks, in which the service area is divided into small geographical areas called cells. All 5G wireless devices in a cell are connected to the Internet and the telephone network by radio waves through a basestation and antennae in the cell. The new networks have higher download speeds, with a peak speed of 10 gigabits per second (Gbit/s) when there is only one user in the network. 5G has higher bandwidth to deliver faster speeds than 4G and can connect more devices, improving the quality of Internet services in crowded areas. Due to the increased bandwidth, it is expected the 5G networks will increasingly be used as general internet service providers (ISPs), competing with existing ISPs such as cable internet, and also will make possible new applications in internet-of-things (IoT) and machine-to-machine areas. Cellphones with 4G capability alone are not able to use the 5G networks
+        .
+      </p>
+      </div>
+    </div>
+
+    <div style="border: 1px solid;margin: 20px;border-radius: 10px;border-color: black;display: flex;background-color: wheat;">
+      <div>
+      <h1 style="font-style:inherit;margin: 20px;color:green"> What is 5G?</h1>
+      <p style="margin:20px;color:purple">  5G is the 5th generation mobile network. It is a new global wireless standard after 1G, 2G, 3G, and 4G networks. 5G enables a new kind of network that is designed to connect virtually everyone and everything together including machines, objects, and devices.
+        5G wireless technology is meant to deliver higher multi-Gbps peak data speeds, ultra low latency, more reliability, massive network capacity, increased availability, and a more uniform user experience to more users. Higher performance and improved efficiency empower new user experiences and connects new industries.</p>
+      <p style="margin:20px;color:purple">5Gi is an alternative 5G variant developed in India. It was developed in a joint collaboration between IIT Madras, IIT Hyderabad, TSDSI, and the Centre of Excellence in Wireless Technology (CEWiT) 5Gi is designed to improve 5G coverage in rural and remote areas over varying geographical terrains. 5Gi uses Low Mobility Large Cell (LMLC) to extend 5G connectivity and the range of a base station.
+        In April 2022, 5Gi was merged with the global 5G NR standard in the 3GPP Release 17 specifications.
+        </p>
+      </div>
+    <div>
+      <img src="https://www.qualcomm.com/content/dam/qcomm-martech/dm-assets/images/components/two-column-hdi/side/what-is-5g-side-image.png?$QC_Responsive$&fmt=png-alpha">
+    </div>
+    </div>
+</div>
+
+
+    <div>
+      <center><details style="margin:50px;">
+        <summary style="color:blue;font-size: 30px;">Who invented 5G?</summary>
+        <p style="color:blueviolet;font-size: 20px;"> No one company or person owns 5G, but there are several companies within the mobile ecosystem that are contributing to bringing 5G to life. Qualcomm has played a major role in inventing the many foundational technologies that drive the industry forward and make up 5G, the next wireless standard.
+ 
+          We are at the heart of the 3rd Generation Partnership Project (3GPP), the industry organization that defines the global specifications for 3G UMTS (including HSPA), 4G LTE, and 5G technologies.
+           
+          3GPP is driving many essential inventions across all aspects of 5G design, from the air interface to the service layer. Other 3GPP 5G members range from infrastructure vendors and component/device manufacturers to mobile network operators and vertical service providers.</p>
+      </details>
+    </center>
+      <center>
+      <details>
+      <summary style="color:blue;font-size: 30px;">What underlying technologies make up 5G?</summary>
+      <p style="color:blueviolet;font-size: 20px;">5G is based on OFDM (Orthogonal frequency-division multiplexing), a method of modulating a digital signal across several different channels to reduce interference. 5G uses 5G NR air interface alongside OFDM principles. 5G also uses wider bandwidth technologies such as sub-6 GHz and mmWave.
+ 
+        Like 4G LTE, 5G OFDM operates based on the same mobile networking principles. However, the new 5G NR air interface can further enhance OFDM to deliver a much higher degree of flexibility and scalability. This could provide more 5G access to more people and things for a variety of different use cases.
+         
+        5G will bring wider bandwidths by expanding the usage of spectrum resources, from sub-3 GHz used in 4G to 100 GHz and beyond. 5G can operate in both lower bands (e.g., sub-6 GHz) as well as mmWave (e.g., 24 GHz and up), which will bring extreme capacity, multi-Gbps throughput, and low latency.
+         
+        5G is designed to not only deliver faster, better mobile broadband services compared to 4G LTE, but can also expand into new service areas such as mission-critical communications and connecting the massive IoT. This is enabled by many new 5G NR air interface design techniques, such as a new self-contained TDD subframe design.</p>
+      </details>
+    </center>
+    <center>
+      <details>
+        <summary style="color:blue;font-size: 30px;margin-top: 30px;">How do consumers use 5G?</summary>
+        <p style="color:blueviolet;font-size: 20px;">The average consumer is expected use close to 11 GB of data per month on their smartphone in 2022.2 This is driven by explosive growth in video traffic as mobile is increasingly becoming the source of media and entertainment, as well as the massive growth in always-connected cloud computing and experiences.
+        <br>4G completely changed how we consume information. In the past decade we have witnessed leaps and bounds in the mobile app industry around services such as video streaming, ride sharing, food delivery and more.<br>5G will expand the mobile ecosystem to new industries. This will contribute to cutting-edge user experiences such as boundless extreme reality (XR), seamless IoT capabilities, new enterprise applications, local interactive content and instant cloud access, to name a few.</p>
+      </details>
+    </center>
+    <center>
+      <details>
+      <summary style="color:blue;font-size: 30px;margin-top: 30px;">How do businesses use 5G?</summary>
+      <p style="color:blueviolet;font-size: 20px;">With high data speeds and superior network reliability, 5G will have a tremendous impact on businesses. The benefits of 5G will enhance the efficiency of businesses while also giving users faster access to more information.<br>Depending on the industry, some businesses can make full use of 5G capabilities, especially those needing the high speed, low latency, and network capacity that 5G is designed to provide. For example, smart factories could use 5G to run industrial Ethernet to help them increase operational productivity and precision.</p>
+    </details>
+    </center>
+    <center>
+    <details>
+      <summary style="color:blue;font-size: 30px;margin-top: 30px;">How do cities use 5G?</summary>
+      <p style="color:blueviolet;font-size: 20px;">Smart cities could use 5G in a variety of ways to transform the lives of people living in them—primarily providing greater efficiencies like more connectivity between people and things, higher data speeds, and lower latency than ever before in areas like automotive safety, infrastructure, VR, and entertainment.</p>
+    </details>
+    </center>
+      </div>
+
+      <center><h2 style="color:green;margin-top: 30px;">SOME VIDEOS ABOUT 5G</h2></center>
+
+      <div style="display: flex;justify-content: space-evenly;margin-top: 30px;">
+       
+        <div>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/6iPuXU6dpdE?si=gIDwnK5n_0Z-82Y0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <div>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/9DWFdgKzwUo?si=ZVQxc-1if57TzpOH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </div>
+        <div style="display: flex;justify-content: space-evenly;margin-top: 30px;">
+            <div>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/1JZG9x_VOwA?si=5tuNUHYEdWjAogRL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/GEx_d0SjvS0?si=zykdQTWU5niYlACl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </div>
+
+      <div class="s2" style="border: 1px solid;background-color:wheat;margin: 20px;border-radius: 10px;border-color: black;display: flex;">
+        <div style="margin: 20px;">
+          <h2 style="color:palevioletred;">What are the differences between the previous generations of mobile networks and 5G?</h2>
+          <p> The previous generations of mobile networks are 1G, 2G, 3G, and 4G.</p>
+          <h4 style="color:green">First generation - 1G</h4>
+          <p>1980s: 1G delivered analog voice.          </p>
+          <h4 style="color:green">Second generation - 2G</h4>
+          <p>Early 1990s: 2G introduced digital voice (e.g. CDMA- Code Division Multiple Access).</p>
+          <h4 style="color:green">Third generation - 3G</h4>
+          <p>Early 2000s: 3G brought mobile data (e.g. CDMA2000).</p>
+          <h4 style="color:green">Fourth generation - 4G LTE</h4>
+         <p>2010s: 4G LTE ushered in the era of mobile broadband.<br>1G, 2G, 3G, and 4G all led to 5G, which is designed to provide more connectivity than was ever available before.<br>5G is a unified, more capable air interface. It has been designed with an extended capacity to enable next-generation user experiences, empower new deployment models and deliver new services.
+
+            <br>5G is a unified, more capable air interface. It has been designed with an extended capacity to enable next-generation user experiences, empower new deployment models and deliver new services.<br>With high speeds, superior reliability and negligible latency, 5G will expand the mobile ecosystem into new realms. 5G will impact every industry, making safer transportation, remote healthcare, precision agriculture, digitized logistics — and more — a reality.</b>         </p>
+        </div>
+        <div>
+          <center><img style="height:400px;width:400px;margin-top: 200px;"src="https://s7d1.scene7.com/is/image/dmqualcommprod/how-is-5g-different-side-image?$QC_Responsive$&fmt=png-alpha"></center>
+        </div>
+      </div>
+
+      <div class="s1" style="border: 1px solid;background-color:wheat;margin: 20px;border-radius: 10px;border-color: black;display: flex;">
+        <div style="margin: 30px;">
+          <h2>How and when will 5G affect the global economy?</h2>
+          <p>5G is driving global growth.</p>
+          <ul>
+            <li>$13.1 Trillion dollars of global economic output</li>
+            <li> 22.8 Million new jobs created
+            </li>
+            <li>$265B global 5G CAPEX and R&D annually over the next 15 years</li>
+          </ul>
+          <p>Through a landmark 5G Economy study, we found that 5G’s full economic effect will likely be realized across the globe by 2035—supporting a wide range of industries and potentially enabling up to $13.1 trillion worth of goods and services.
+          </p>
+          <p>This impact is much greater than previous network generations. The development requirements of the new 5G network are also expanding beyond the traditional mobile networking players to industries such as the automotive industry.</p>
+          <p>The study also revealed that the 5G value chain (including OEMs, operators, content creators, app developers, and consumers) could alone support up to 22.8 million jobs, or more than one job for every person in Beijing, China. And there are many emerging and new applications that will still be defined in the future. Only time will tell what the full “5G effect” on the economy is going to be.
+
+          </p>
+        </div>
+        <div style="margin: 30px;">
+          <img src="https://www.qualcomm.com/content/dam/qcomm-martech/dm-assets/images/components/two-column-hdi/side/side-image-2.png?$QC_Responsive$&fmt=png-alpha">
+
+        </div>
+      </div>
+
+      <div class="s1" style="border: 1px solid;background-color:wheat;margin: 20px;border-radius: 10px;border-color: black;display: flex;">
+        <div style="margin: 30px;">
+          <h2 style="color:palevioletred"> Where is 5G being used?</h2>
+          <p>Broadly speaking, 5G is used across three main types of connected services, including enhanced mobile broadband, mission-critical communications, and the massive IoT. A defining capability of 5G is that it is designed for forward compatibility—the ability to flexibly support future services that are unknown today.</p>
+          <h4 style="color:green">Enhanced mobile broadband</h4>
+          <p>In addition to making our smartphones better, 5G mobile technology can usher in new immersive experiences such as VR and AR with faster, more uniform data rates, lower latency, and lower cost-per-bit.</p>
+          <h4 style="color:green">Mission-critical communications</h4>
+          <p>5G can enable new services that can transform industries with ultra-reliable, available, low-latency links like remote control of critical infrastructure, vehicles, and medical procedures.</p>
+          <h4 style="color:green">Massive IoT</h4>
+          <p>5G is meant to seamlessly connect a massive number of embedded sensors in virtually everything through the ability to scale down in data rates, power, and mobility—providing extremely lean and low-cost connectivity solutions.</p>
+        </div>
+        <div>
+          <img style="margin-top: 80px;" src="https://s7d1.scene7.com/is/image/dmqualcommprod/5g-being-used-side-image?$QC_Responsive$&fmt=png-alpha">
+        </div>
+      </div>
+
+      <div class="s1" style="border: 1px solid;background-color:wheat;margin: 20px;border-radius: 10px;border-color: black;display: flex;">
+        <div style="margin: 30px;">
+          <h2 style="color:palevioletred">How fast is 5G?</h2>
+          <p> 5G is designed to deliver peak data rates up to 20 Gbps based on IMT-2020 requirements. Qualcomm Technologies’ flagship 5G solutions, the Qualcomm® Snapdragon™ X65 is designed to achieve up to 10 Gbps in downlink peak data rates.</p>
+          <p>But 5G is about more than just how fast it is. In addition to higher peak data rates, 5G is designed to provide much more network capacity by expanding into new spectrum, such as mmWave.</p>
+          <p>5G can also deliver much lower latency for a more immediate response and can provide an overall more uniform user experience so that the data rates stay consistently high—even when users are moving around. And the new 5G NR mobile network is backed up by a Gigabit LTE coverage foundation, which can provide ubiquitous Gigabit-class connectivity.</p>
+        </div>
+        <div>
+          <img style="margin-top: 80px;" src="https://s7d1.scene7.com/is/image/dmqualcommprod/how-fast-side-image?$QC_Responsive$&fmt=png-alpha">
+        </div>
+      </div>
+
+      <div style="border: 1px solid;background-color:wheat;margin: 20px;border-radius: 10px;border-color: black;display: flex;">
+        <div style="margin: 30px;">
+          <h2 style="color:palevioletred">Is 5G available now?
+          </h2>
+          <p style="font-style:initial;color:royalblue;">Yes, 5G is already here today, and global operators started launching new 5G networks in early 2019. Also, all major phone manufacturers are commercializing 5G phones. And soon, even more people may be able to access 5G.</p>
+          <p style="font-style:initial;color:royalblue;">5G has been deployed in 60+ countries and counting. We are seeing much faster rollout and adoption compared with 4G. Consumers are very excited about the high speeds and low latencies. But 5G goes beyond these benefits by also providing the capability for mission-critical services, enhanced mobile broadband and massive IoT. While it is hard to predict when everyone will have access to 5G, we are seeing great momentum of 5G launches in its first year and we expect more countries to launch their 5G networks in 2020 and beyond.</p>
+
+        </div>
+      </div>
+
+      <div class="s5">
+       <center> <h1 style="color:green">The latest 5G news from </h1></center>
+        <div class="s3">
+        <img src="data:image/jpeg;base64,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">
+        
+        <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxMTEhUTExMWFhUXFxUXFRUYFRgYFRgXFxUWGBYXGBYYHSggGBolHRYXITEhJSktLi4uGB8zODMuNygtLisBCgoKDg0OGxAQGy0mICUtLS0wLS0vLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLf/AABEIALcBEwMBEQACEQEDEQH/xAAbAAACAwEBAQAAAAAAAAAAAAADBAECBQYAB//EAEEQAAIBAwMCAwYDBQcEAAcAAAECEQADIQQSMUFRBSJhBhMycYGRQlKhBxQjscFicoKS0eHwM0OishUWJFNzwtL/xAAbAQACAwEBAQAAAAAAAAAAAAACAwABBAUGB//EADoRAAEDAgMECQMEAgEEAwAAAAEAAhEDIQQSMUFRYfAFEyJxgZGhwdEyseEGFELxI1IzFSRisnKCov/aAAwDAQACEQMRAD8A+ePd3ZrsOGZc8WWbqXzWZ7YKcwShC5UBhEWo1h81opPugeLLTRq0OMpSZuNiiFgqWJqmk1iqm6cwJdMGs7TDpTTcLSXxCFitvXw1IylJXLk1kc6SjAhBY0IMJgQGbNU4poCrcoVbUI1ExWQ0bChKOtG4pRUXDSXKwqKJqkRMITCgKMKbZzRNUcLI7CmFpSgUPbQhHKJ7yml9kGVUJpKJDcVRRAryrVgKEoi2waZkCEuIRbemmh6tLNSFJTbRN7KgdmRrGoioXoHMKHfvyaDrETWKBdow5WWINxZpbro2mFazZomMkqnvTQ057Vp6gpHWBP2Lg21opkQku1WdqHzWao660MFlAioC3arMq6XBRFzRogLSnrWoFNbUCSWlVPiGYoevE3RCmYlL3WnNA5wcUTRCB1pJsUzYrvxVqggrJIA5NUeCZC3dT7L37dr3rIdveKY1gULHASubuiDWd+qNuircoUTdUOojVlo2hCVq+H+HtdwoJPYCa1ZJak3Jsq+IeGXbRi4jLPEiJpDmK7jVK21pYChKrdsdajqR1VtqKlmwZqU6ZlE94hNXtOa1PppLagQLlojmlPpluqY1wKXakOITQERAaqUBVRVAIkTZTA1DK8ixRBt1RMpmzdg0wJT2yvavNRzIVU0C0uaEU5Ka42V3t1T6UFCHLxTFCRAUzIYFAjTWiEHNaaEA3SKui6C3dWBj9K6Ie1ZspXLrqTXJFUiy3GkEYwR60wxCC4KTcmsxlPAChDUBVlMae9RtelPYrNk1RMqgiWzRNlA4K7rREIQVQGiadiJFtHawYcgg0yAqDivrPgX7StM9kWNTb24gmJBqg0EyCtba4iHLK8b9ltFqpfTXFBOcH+lQ05RFrT9KydJ+yrVXeHQDuaQQGoRTcuh0P7GrYE3tTHeIFTNuCPq95Wna9i/BdPm7eRiPzP8A0o+2dAhimNStzQ+1vgelH8JkkflQk/eKE0axQGoNhXCftU9ttLrlRdOjeXl2WKsMNNtylOfmsvmsVQQoN68ajqhiExjAhJqCKWKhCM0wU/ZuyJNaWvOqyvZBgIdy5uoX1C7VG1uVBKCkEBMDir2zFUELhKoRRC6IL0U4NhSVdF70UISVEZoM0FXNkV7kiKYauZLDYKCxoS6AmBUUk0ElwlEYC2tH4HeuJvCHb3IxVi6XlJuFvaP2YsC2HuXM9RIAoxTCLKIuVZX0VrsflmrkBDLApPtFpxwhj+7U6wKZxuXH2/C3bKqYFAzDOfop1wCDd0zKYOKjqLmmCrbUB0QXYcUswLJgBQgc0uIKM6J/Qqud30rZSFOLrNVLrQgO2azuRgKVvVbHN2qyxWFyaMjchywo94B1pcgXV5SUXdIxTS+W2QRBuhg0pj4RQvWtU6GVYqfQ0ZqOlGAthfa7Whdq6hwPQ/1owZvCqTpKztT4rfcy964Z7uf9aLMR4qQEoTPJzV5t5UjcEZWGKJ1QQEsgq80lzhCpVDgUkGFeUlBuxULUxsoQUVYYjJK0NHa3YrTTpgrLUdCm5aIMRVuZFoUDgrr4WxE0P7Qm6nXhLMu0xScoa7KUYOYSqMlGA0IgUuSRQw5NsVf33eo8kaociIHBoTCEghXFo0WRDmC8bdVCgcpVaJoI0ColfUvZP9pFu1YGmvacEcFhH3g1OpzHWE1lWLKdbo/CNXOy97l+xMCfrihNOo2wuiIpuXP+Ifs/vqN1i4t5fQiaWXkahCaO5c/c8E1Skg2HkelXnCDqip03jTJ8Iwea1UsSWaLP1SR8Q1Jdpqq9QvdITKbYF0kFnpSMua6dMLz6UqRINQ0HAhWKoIToFvaD+LqKaGtjW6QS6Y2Jwm0ywBFPIa5sBJ7TTKy7thQcGsRYFqa8kXS5QihDSm5gVCWiRNaKdEubmhQvAMJ7RQEbitLWN6slZ6p7YXremJQvmAY4rMyk3LnJRmUleMUioQDZMYJUAmKprjpKsgSq1dtqtXQelW0i1lRT+l0xcHaOBJreGhzbJNyUCKylhi6koTAdaWANpTATsVAF7/KmBjDqUUlWs3gvSaEPDLgIXsLtq3NFexi2Z+VaP3VKmLpP7Ku89lpKT1KXJLMjAfIxWJ2JD3SCnHCVWDtNPkhNqGIjdTDWeREpIY1AakkFMELwaoJCkKvu5poLtqvNChdNUgTJUNRFXT5xVkXgIDUtdEDEc1M2XVDAKkXDRtrkCIVZQvbCetMkvtKkgL2xhSi1zblSWlCd1gypnvVtcwNmLpgBV9F4pesmbV11+RMfal9Y6d/emQt1P2ia4CN6mOpUTVF7NrUUu3rnLuKjo2JTbqNx7cU6XagaK4G9TaZhkdelDdokHXYqcGmxTr64ldrDHyo3Yk5MpCT1V5BS3JkUtmbVqZoLqN561WdwurgKrmhJm6sBGGmcruC4704YeoRmAQZ2gwSgXkI9PlVPzM2o2kFafs49pS/vV3Dbj50/DvY0EO0S65uFsezPtAiKbTIAktBIkc9ajHMqcE0VMgAKF7T6OxcQXNOnn/EEyv8AlqVMOHNJRgg3asDQ+E37o/h2bjwYMISJ7TxWIMjVXBJst7RexOqYEvZ2COWcKR9KsQhNN6ct+xent51Gvsp/ZUhm/n/SpLgbNVlo2lN6PU+E6b4bl2+/HEL/ACArQypWNpAQ/wCNt7lc77X+J2bt1TZtC2oEQDknuYoazS3skyVQIfcCFhq8mAM0nU5YULYuSt/wH2WvaqMbLYOXIyT2UdTScb0i3CgU4l2sfK34HAOxHbmG7/j5X0Lw/wBkNLpx513P1GC3+InC/IV57FdLVDIefAe69Bh8LSYP8Lf/ALH2WohRfgtIv+Hcfua5L8dVdpZbBS/2J+ysdS3GI7bVj+VLGKrf7KzQYdi5n2w8Ds3NPdurbVLttGcOg27tuSrDg4mux0Z0jVfVFJ95XH6TwFJtI1Wi4Xy8Ed69KDF15uCigDmjL5MoLq00RfIhCvbjQKQEaxdgzMEcUTHlpkIXNWha8TU4u2ww7jBrWMU11qjZSywjQqfd6cmVLD+yf9aJow8yD4KiXpS8oU7hxOKU5hBztsFYM2QHJOZz64P3pb5cdUwW1Q9RZcAMUJU43RifmKJ7Cy+WbJjIOiRrMBmTlShIKJPXLs9K0PqSbBZ2thWABA79aMuaWg6nahkgoiaxQCpEdjVdaySIhQ0naqw0hdcvMdqp2ZzQ07FXWBpsEN32g2wBJ6/iHyprXgU8gGvmrHaOZe0Gl3PsIP8AWgZQzOyiVdR5AkLc/wDhKkQdqjuTWoYQ7YAWbrDMrL1Fv3blfeSo7HFZqssdlzSE0HMJi6DdvSBt+s1C8CMoVtZBuld3Sk5jEFOhetqxwKum17hlao4tFytj2b0Fy+zBN29RMqYgdzVjF0qTTUrujZyEdPD1atQMoj4812Hh3hHi5TbbuOidWFsAH/GwA+xrFV6Rpv7QbPHRdVvRjxarVaDuFz7FHPsRcfOp1c9w14uf8toN/OsNTpnLtaPX7StLOiaG3O7wyj1hM6X2K0FvnfcPogA+7sx/8a59Tpn/AMie63Pkt1PAsb9NJo7yXc+afPs7obu20dKIYhd5c713GNy7doBEzx0pNHpV/WNAFiRNyVeKwYfSOaLAxDQPk+q+IOhVip5UkH5gwa9S0uBkFeVFwuk9gfBm1Gpni3bG643z4Uepz9JrNjMf+yaXm7zp37/BaMNhBiXZT9I1+F9juMLQCqIeOn/bU8AdmI5PT5zXk69Z7SSTLzcndPv9l6elSDhH8Rs3x7D1SIHPoCSSQAAOSScAeprJSo1KzwymJJ2LTVqspML3mAFh6v2s0yFgoe6R1EW0+jOCx/yivS4b9MvcJrOjuXna/wCogDFJk8T8LIs/tBSfPpWA7rfBP2a2AfuKF3QNP+Liqb07Um7QmvG/arSPo73u7pLvbZBaZGW7ucbcjKwASZDEY7kClYTourQxAcTYSnYrpOnXw5YAQ4wvlgJrvw7YuKQFZWzPHyqgqIRkvntTQZSywIvvaO6DIodm6CrcLKwG7UElwetJIdKYAwhGe28gd+1O6t+5KDmQtS94LctorF1JYqFtgksSxgVpfhnMbJPggzB1gFpXPAf3Y2X1je5Vy3lUb7iwMSpEZ+tCwt+ppuPJM6stguXO3yQTsclJJGYxOJXiaB3WtJLTZV2TqEo7dTSi8zmJTQNgVN1Ca3BFC01VDPSB0rYQx/0iIWOXBMWklZHQelahTdlDm7ks63WZdsk1z34c6ytbXgKbSMuQYoQ3KJKpzmuW34T441kRsVp5JwfvWuli+rEQFnfTnQoVvUO11rjKWkfhxHatNNz3PLiJHBUQ3LCVu6S4xy3OeZj51kqYOoXRmRiowbEH92MHnHpSOoMdyPrBKpMDmqmNVepUG4p78U4uY7VXlIQmvkelINTLcowwFfR/2OsrXb/qluR287T/ADrz/wCpurqMoubvMjyXT6MzNDx3e67jxZyb1yTMO4HoAxAA7CBXncU4urOnYSPVelwrQ2i2Nw+yTNZloRRpnjdtIX8x8q/5mgfrWinhq1T6GE+CRUxNGn9bgPFZ172h0mnId9TaJQ7vd23F12Kmdo93IBMRkgV0sL0TiM4c4AAEHW652J6WoZHNYSSQRpb1XxcKzsWIySSe0kya9W0E6LzDnBgX232D8JGl0Slh5iPfOD1Zo92h9BKyPRq8djMT12Me43ay3lb1d6L0eEpZabWDV3vc+Qt3wmWYkkmSSZPck/1rnElxk6ldoANEDQLjfa7xU3HOntuRbQw5X/uOPik9VUyAPQt1Ee+6KwLMJREntu1PDcvC9J492KrGPoGnz4/Zcbrre1iASR61trEZoaTCxMuEuBSsqIlFt6bdMZiiFORKovgoH7uJ4zVMhpkJnWGFYaBuZAFWGE3U64Ko0fc0Bap125FTTAVYaBogNRxRQIopS15lmorBhTbtgMCRuHUTTGPgjNcKF1oQ7xz5VjMgzkRwJq3vb/EbdUTeJXW6H28vBCt8LdWAAjIGUj1NUWUHNl1jw5hPbWKqy+E6s4W5pHPVDNufW2cAf3YoWUX/AFU3A+hTMzTqEjrvYPUQW0729Un9hgtz6ox/kTQVKrxZ7Y53qBm5czd8MvKSrWbqkcg22BH6UrsIoKNZcfhAGIrUyrlJLBCxuB2q4x1owY1chN9iev6XyiSKbUeS3I4JYdeUiQBxms7SG31TLlNeGaVWJ3AmrpU8+xC9xGivftlZVVIHzpsVGWahBBuUG3qNhAwCahfcDQq8pKaa4ssXuDoMdRFaXnICSUIabQFm6w2yT7tpGOmfWs1RjXCaZ0T2Bw+oJNmBrF3pwBCpfuSAIwKKpUzMDY0RMbBJXd/sYuxqbw72Z+zr/rXm/wBQub+3YRqHexXV6PF3eHuvo3iwi/d//I//ALGuFiRFZ/eV6LCmaLO4fZcF+0P2h1Onu2bVi81pGsK592AjljdvKT7xRv8AwDrXp+iqNP8AbtfAnuvqvNdJVKhxD2kmBFptoNi5PX+IPeUNdY3Gj4nJZvu0mu8HQ2wXDDSHpCzgglRE5FXlcRmhNdERK3dLqbV25ZtqNpZ0SP7zAf1peIrilRdU3AnyCChQc+o1p2keW1fY/Emi2qjqx+yAAf8AsftXzekCKEnVxny/JK9zh2y8ncPv/QWNrNT7q1cuzHu0dgezRCf+ZWt/RVEVsWxp018kPSlY0sI9w1iPOy+dezHh51F429x2qjuXjosD7ksK9f0hjP2dLrHCZIA7yvIYHB/uaoYTC6pfYmzO662YB2+ZjkSJHlXg9zXGrdMGdY4AfPyvTUeicIzRpdxJgenwtTS+CaW38Nsk9/Kv6KJ/8q51TpNzt57z7Lo06Laf0Na3uF/P8LP9sNJaGkvOttEdFVldQd070BBJJJBBIg9wela+isfWNfqybEGy5nTOFY6iajruEXt7AL5Qb7HNelkm6811bRZGs3z1xVtO9LfTGxN2ry/OikSlFpCdtW1bijAnRLNka54Q4E4HzOad+1eBJsqzhIukc0hEqlwOtVKuEHUXl7/ahLgjawqltj05+1WxxGiIgbVF5yTLfoI/2NaXEEZz8Kxde02vu2iDbuMCOM8fLt9KR17m6GRuN00LoLX7QtcoA3kx1wf1IJ/Wqz0TrTHmjzHeuatrmKKA10FJcbJy1bIYC4Ns5BPFMawgw+07SkuuJaqPJMCTPFAWPe6FbYAVl0zSRgECSCav9u4EgmFC8AJrwh1LbWuMgPO0ScdvWtWGggjMhe3gvWrSszjzEAt8RgwD1HegNMkkCbISYWRrsMSpETwKx1JgvBHctdK4AISzRiCT3pZc1paWknemiboiWjyKf1bwczNCgLgNUymjB+NoHemii13/ACkBKNX/AFCFftATtMjoev2oH0QAclxvRtdOuq7D9j4I1r+th/0e3XmP1BQIwk7nD7FdTo93+Qjh7hfT/Gf+vc9WJ++a4OK/5nHnRekwn/A3uXMe0/sgdY9m7vVVFnZJdFyt683WWOHHC13MDjBRwzQSNuveVzcRgadau9zy7ZYDgNsQkrXsDaClf3oCeq2mcj5M23+Va2/qEMGWQR3FKf0NSdcNcO9w/KxfGP2eXlBbT3hfAElMre9dqEAP8lJPoa00ulKGIIa1xB3H+gsFfo2rQGaJHPE+yzPY7w//AOt0zZgXVPGMT1oukaJ/Z1I3FY8JVmu0HevrupclbZ/ssfvduD+grxjmENY3cPc/C9pTAa53eP8A1Cx/aG1u0t5eJ9yOCedTZ6DJrsfp9n/eCdxXL6fdlwZPEe65X2T11uw7G4YDq9ue07GWUAwJBE+vpXoOl8K7FYcNbqHTu2H5Xnei8U2hig6oYbG7iu31niNgkv761tIVp3gmDtA8qyRkgcc15l3ReIqPJDfOy9S3pPC02AF48LpnVaXYAdwMkjE9gevzrmmkMsgzsW6nVzmIXPe2DxodR/dT9b9of1rodDiMUDwKxdMD/tT3j7r5YGxGK9fNl46LyqhaGFcq9tBVgBC5xTFu4VBGDMZ/EI7GtDS5rSBefNLIBR28UY4Jbj0mfnVurZtVQpIN+4SOnzmTQ1GQJBVtAlV03ugf4gLDsDFFSdSA/wAglES46Ja7tJO1e/ripUdTd/xtTBIHaKa0WmZs8gc9Y+a8xV0KTnHMEDjCnVqRhSGU/lyPscijruIs0jKdgQgibpFgCD0P6VjIaQd6cCQhx60qEcrQ0zW4KsCW/CR0+dddlSkOw+5Wd2bUKL28xuYkDjrSng5pcZGxU0tiwWjatJ7ud3mHSnNdk1KQSZWbftTkYPXNJr5KgkGCnsdGqKjuDvDQQAJUdvWqFZ+bNPkFRjSEGckySTzJ5pBq3lFchVUAfhH2oGls6KzJ2otwhoDfIGmhzdtuKES3RA/diDg0Lqbs0T8I+tkXCYXTE4HmJ4Ao/wBuNAZPBLz3QL1gqY2sG7EEH7UsZqdgCmh06rr/ANl9grrQTIm1cERH5T/SuN+oGPOCLjvC39GVAaxA3H7hfSvGv+s3+A/dFNeVxF6kjcP/AFC9Xg/+EeP3KUtWGb4VLfIE/wAqBtJzj2QT3XT3VGt+ox3q93TOvxKyzxKkfzpjsO9v1AhCyqx/0kHuKHUDAjWJ4wgTW2NQZO/4hggMhCu0HgbWRiR1Jr12EquxWAe11yGkell4rH0G4THNLbAuB8zB9V0F74LfoHU/MXGP/wC4rzdS4a4bvefdexZ9bvA+YHwlNTY96j24kupAEwSwIZAG6Hcq56Vq6LqCni2F2mnmsXS9A1cG9rdYnfovmuwhV+KN/aUmB06t6dor2rmFoG6fBeBkEnSY8f6UyJwVmADFqDPvpg48rRmR0he9JdtTmbPD77/dfVfErmB/eP8A6rXgWjseJX0TDtv4D7lYnjVpX015GG4FUxMf9+0eYMV0+iAP3QkbCsfTcjCHvC+c2/CkRgzA7YBKF1Eg4BRp83y59K9fTp0g648PyvFue4hZ2qlSfKQJwD0HSl1acEkW4ImAGyCt2kiZRlqltTTOsOioUkP38mqLg4yiyQEZ7eRk/wDOlNfSEjKUAdY2Tmv920spgYxHWKp12ydEtpcDCp4HoVu30Rm2hmE9JHJE9JGJqqLQSnzJAXa+I+GCyrolhTaNwN5CXubQsZu/FE9P1rbTLAJMz5KqrXXAFlyGrsrJ2mPQ8j03VnqUgTLEhphI3EIGR/z51mII1TAdyAVHrS7JklNWyFPFOZASjLkw94HP9KZnCVlKlhPBAp0B4hpAVC2qER3pRDRZxRjgvK1C1zhpcKEKpE0BhxnRXMKRb9D/AE+9W1reJUlM6dDMBQScAQSZ9NvWtNJ4YdEtxtJKgWM5n9APvmg1cTKmaybRNpEMq4DTJn4ZiSInp6niajSGmR90GaRpzz+US7eBSdpkkgsWJOAvTpzz+gjLXVQWqhOaO7355tfSX2stcayxVkPlcFSYDbcnIMg9MGeorNUax7XNcJHntRU6j2uY8GD+OdV0N/24vnbNu0H2CbrWmLMQkKQhfZ0Anb6xXPb0VhA/MWzbb3Wsuh/1bFlmVrgL7O+99ncsrWePXrwTfeZiGypdlXleQIVR2jjPFdMdWGtDAAQuc9z3FxcSbd6639l+pZv3i05m3NskTKjcXDR6+UEH0rz/AE2chpu3kg93zrBXb6Ie7K4DZBHfyLhad0QSDyCR9jFedLIML2be0AQuZ9tyCmn451XJj8GnzPfiB1Nek6Bsx/f7Lyf6knracbvdbng+u9/pg/4viI9cJd/UI3yNczGYU0S5p3yP/j+LDwK7nR2KFemx+2Mp7xce/or76xALqQsfxbwC3eb3iMLTltzjIVj1KlQfdk8/CRJJkDA72G6XysDaguNu9ebxP6ea+oXMcQDsgGPMifP5MaHwIIZe4p6AF2uY3FwICgN5jPm65peI6SLxAMd2vn/S14ToahQglpcRvgDy/ta16/ICiSASZPxEmAT2AwMfqa4zoNgLLtMZBk+mnPH0WZ41eAsXJIEhFBK7hPvEYCDySEP2J6V0eiGE4idwK5H6gc1uEgnUiFyS3DtIy0rbHwY54OfsSDPpXqg6F4jZ5K1/TqwiNg3XyFKDaNqhojBXgCATHQdCQMW/IVk+6ztb4OIlQygKpLYKZHdZgZ6xVOaDw+yNryFn3/C2QkPiCQeuRgjFV1IiSUZq7ISsqD1NILmzARQ5wW74QbJgXjHZfzZzJrpUuryAVD4LI8GSQmdX4dbBLoQo52kysdqW8NDi5lvshDyRBWPqNTbOVBBHMUnrWzICc2m4arQ0Hj2oQD3d0EARsYcj5807OalxCYKjmWKdXxjT3zGotbH/ADj/APoZ+4qFzD9Vu/5TC5jhdTf9n9yzYuK4/KSAfuMH9KjmOjeg6oG7SsW54XdBIOnuT1hSR9xik9Wza0+ivI9Dtaq2gJeyt3jaGZgoPchfi+VJDmgdpVS1S+p8T3EEW7aQIi2u0fUEmajqzLADxTHU8yY093dAESfUD9TTGvt2fNZnUyCpKz61UF1ihBhNHRlcSrNBJVW3bQokklccScHpTMmUayUGcET+OG1R7sBQw7sOgGApEH4up59OcwOgkKZiXR3e/gjtZ2s69QDBZDuwQZzlTA5qzqUsOzNaffmVUOPJxM+bkdcSfl2oZFkUG/ppz5rxfFwCIkfiIGGMQpjfz2kDOKhOqkXaT9uHp5q6E7kw4lQBtyxEFfLEYPEfPmpJkITGU6a7dN90Eny89TiB1Azu+nFQ6Jkdrn7IlyCXPkPUESo+IfADHeII4ntNXEzCEGA3XkbedVa0DuSA8lT8LSx+IGI4HQjtPeqEyFTiMpmNdumzmd69ZBYKACTuMDZI/D1GW446R61RIDZOnojawuflaJJ3a7dnv8L6V7E+H/u6Ozkbi2+5HARSdijsSTx3b0ryPSdX93iWkfQz13+cABetwHR78PQh47bvS3rGpPerXL0kk8kyfrWWZuV6NrIEBc37WPNxEgQltiSQI33BJHmxu2i2O4I9K9b0VhjTw4cR9V/YarwfTeIFfFuDTZsDyufVJ+EeKHTsDEDqPwuMgzuIHBjHIJBmtmJwtOuwNqWI0I/MAjesmCxlTCvLm3B1HxuI1B3rprOqt3c2XDd7cy4PYfnHqJPfufK4voytQu3tN3i/5XtcD0xh8QMpMO3G349Y+yhyRggg9iINc6YsV2BBuFKWXbhWPrGPqTgUbaVR30tJS31qVP63AJTU6nYDFu5cbgBUIWfVmiR6qGHrXRw/R4N6zoG4XPwuVielSBGHZJ3mw8tfssPxU32Yb/egA3dgW3sUD3eduTJIHmyfKOTXoaFGjTblpRzv3ryGMq4mpUz15J2bo4bu5ZrWj1DHFkeZwBBGBn8J6flFPLIWMfHPOiEVHZf+5y88AxMHBHT8xjmhUMffn4V/ekT5lB2oMTOAOCRgjr07VbZBVE2TKPbZ+FEuxkL5SmIlJAI5xAPr2MVI1RCJtvSd/wALVgGgfCWDKrEYJEMsSOORI/lVuaDePEfCtrjGqy9bprhJcQfUZH+3yNC+m4iQipubEFZbO0wxPyNZRmm5WkBsWCsLhUzVZiDdUWhwhFN9WHw5+3605rw8REoMjmnVaHh1gXg+5giIASWifpWpjetBkw0b0l3YiNVtWvZp1Be3qCMSuwEzjHBz8orQMGWCQ/yQU8RLiI0StnxnXAAQv1BB+okQfpQNZWInKPstJrtFpWDcSRXMiULTBSt2zHFLLYTmvlG0gkj/AJ8v1omEyhqGE4GyoAhuoJEMScRxGIEHt0rQYtvWcjUnTnn5WiNTumVRWEqfL5Z2kdJAbGPWD603rARBABSckARMc8+io07Ixhu/mmPyzxjmPrQHSFP5eHh5/lTt8xAVh5CYVpMe73ST1HUjtIxFVF1U9mSdu3vjz2DjdULHaOYBaBHlGF4M8nqI6DmcDsRADMfDv28jxVnYEvlTMwdsT5h8IHwn04ias6lCAYbY8jbv+VezZJKQsz+VoJ8xGSZCHp8oNWATEBRxs6/mOHryEVNG2zzEgbh1leG6D8Xb0miDDF7KFwzeHjs9Pwuw9jPBbb3rvvIuSiQSoA8xyQPoMj9K4v6jdVoMp9U6CXa+C6/QeWXktFgOO+de5Pa/2a0QdgEuJtZllWVgYJElXXn5NHpWA9LVGktM2tNtnCF6JnRNFzQ/I28GII17j7K+n0WntgAe9brEpbX6hQxPTgik1ccagvJ7z7XW+hhOp/42sb3CT529ZRL2rJAUAKoyFXieJMklj6kk1jfUcdVrZSAOaZO88wO4JHxDxBbCb2gsZ90jfjPc9rYPJ6xtHJI34DAnEODnWaPXguT0v0q3CMNOmZef/wA8T7Bcfcv3izFidzEs7EAEk5MyBOT8q9cC8cPReC7LuPqhMEOSY6DkjO7MSCM5wSJqiGnUq5I0TGn0beUKrEt9mAzIIIBHUyYFZauKFMw0X38wuthOjDVZnqWG7aefNbVrUOoBNx8AQVd0sSNv4dw951yYXnytzWJ+ILxcAcYC7FHo5rd54SePPwi6ixfwblwgYI820fRPL25/Ss7pFyefTnYt1JjDZjefVAPup82w/wBsb/uVCqD9/rSjXp7R4/iy0jD1dnlb7yft4KdZauCzddWUrAkqNpB94okhgDMFhOeTmt2CLzUkaQeC4vTbWswwB1kcfLVYVoridpMqeCYCg7hAMEHr8uldW20ryo4BaPhD6YZvoWw+3aYGZEP5SZ7EHHpRAg2048lG0tAuJ15+FoXtFpL5izcNhiUw43WmKiBtflW5+Lk/eo9kceP4RjI/Qxp3LL13hd+ywFxbgzcYMvwmVncrKSMxLegpYEoXNc03nbz8pVSyjAb/AKfMjAL/ABDHw9I7k5oiY0QD2TA1JAYsM7bSmGBkBQBInzCAMQYwMRTGVS2CVN/gqazw63c3bU3/AMQKpUqGHxY/K/AyD370Tix94+UYJBtvWDqvB4kjPmKwcNIAJG3nqKUGU3bJ9PRMFQjVZF22ymCIrM6RYCFoaQVs+z/hHvgxZwqjkk9u1acLR6w9o2WXEVcpELSPhrWVN2xcxyDJEj6YamtaKYllp3pOfMYcsi9qbhYljknNIdXqzcpmRpQQepEgc/L50AcJuLI4Vtbq7RANu2VOdyzK+hBOauqaThLBBRCm6blKLdaZWAf1pbWOddqMtG1XW4Srlipjackh+SIQAwec46Chk3lUWgOETt7vH2T9vUW0XaVaWHxLcHwzGVAkwRO1vQ8GtBytsQUAuDHPpz3qFv8AfzLwrZx1gE/Piq14hLLE4qBmJVSygHAJnCGWPUfCWI7A9M0USbaJJloub/nT2CqVG3rz3Ecfl5nHPyoLQrvm5+6ZL+YlWLFhyYLnie+ZHzo5E2QAQ0AiI3aIi3mxGIGSYHJzM8iTGf60QLleUX2qbt5DncAZBAA3DryWAA/UZqHLv8lII0HPun/Z7x86W5hCQ2GUv8oZeADzz061g6RwoxdHqhYgyDrdb8Bif29TMRIIg88F1Go8Y011muLqERWYtFwPbYbjMEsu0kTGGPFcGt0XXzEgDfqvXYXpjDdW0GbADTciPaRQGuX7aKcgkXNxHdVKAv8ASk/9Pqj6iAtbek6T/wDja4+EfcpLUeI2Ri0+4/na0zAeotkqMY+IsPStmHwuHYZqS70Cx4qvjqoy0oZ6nz+Auf1fht92e8ji9mSc+9gcbldRugYgFgP5d2liGuHZt6LymJ6PrUTmdf1WQhxEg9xzAMcHp65jinjisHcnPD9MjEtEqo+E8s2YED4unBnjFZcVWDGwzU883XW6JwXX1C+r9DfU7B7nZ5rfT3gm2mD/AN548oII8k8kDjmS3oBHI6185W+K9cKLDD3+A5/qO9VhACyt7uD8fx3WMAkK8yh7iYE5YgiY1hqGxjjr6896las2gO2M24aDy298eEpa1fIMWrRk8yA7MpnkEEEeoA4rS2jTp7CTxXOfjK1UiXQOGzxWlqwYUe7FtiXHkthAQAhBOJGSciue2oXDSDwHJXcygON5FtTO/wAFm+IWGFu4zEDygBt24yLtsjgkg4rZ0ex4ry47N/JXG/UL2HBgD/YbOBWFvU5YMZ/Fhc9Z53c+hruy3b8LxMOVlY/hgj+yPN9Zz/Srncq701b1B3AktyhaXyQuBjJJjEwYzRA5TP3+FcytPwzxt7flUAoQ+62SGtnBPwNxHPc1HOa46eSJj3N042PP9pptHpL4MRp7hAIlpsmSOMyh6QZiT2wJCYMjv/E+ix/FfCbtgn3ltVBK7WBJUiDlGkyp5PUY4oELmFuo54JXdnm2P4k/CSBBGeDNvPGeOO8Cry158Fa06n3Yfa38QlgVYnb5IysNt+LCmecCRNyoIkd6V1SJ7tZ2zLBlb/qfhwSDwMxgdeaMuEX9flUJACyb+lQjysVAy2CQPUxSalMESyU9jzNwtRdcos2UcyCsTztA9Bzj+VN6z/G0OSchc8let3LEfET6wvX60Yc2P6VFh3LPvElSJpBkhE2AZWW9g5PakimSCRsWwPCjS6d3aEEnJ+QHJNCxjyZb/SMkRdaS6SEcM6bisDyEmQymAxHlOOe0ic1rMFpzG/csrnAOESb7O467x53hSNGCEYiRmdoIJhgTuJxOYERilkE3QdaZcBz3e8ojaUqWZSoA4Ekq3mA2ZGTBJhugNWMzZIP5QCqDAcJ9ra/1tKrZYzCyjnGw4BB42k8zxB+9E0yYFju387kwgETqE3bvK0hhDDAX4ROeesz0Py7UQDTrY7udEsgqZccYx0jAPeOD880MumBZDAGqtAPJ4EkiC39AR6TPrVd6qP8AVQ8ZMTwB2PzA+E/89ahgaKwZT/g9s3LhVhIgsf06jj4pOenznNi6z6dKWb4XT6IwlLEYrLU2Anv089VvtoRZfZaAa6D5mA3XQxAJFpQIWBjf8RgnyjFc0vO/5Xpm0GHtEQNmwePxpsuUKzojJJdnc8qi++fmPOAdp+rz6TSg6OPPO1aSy2gA3nsjwJv6IzaAcrZuj5OsD5k22Nv5Ex61CTsEc8/KpmU/zB54ET4CeCD7gbhLNbcRHvCGzMg71gjnqsetDmg9qx4pppdnsjMOFufOeCzvHtOoIdgd7llc/CN6bSX/AMQYdshz2rsYSoHsh2oXjOl8N1NbMz6XX7t60PCdMVRYUYAZYEzefFv4uCu6f8Fc3FVS6oY7h4flen6MwzaWFY12252a3OnCAmL25yE+JQQFLtBLTG4E8jMAQYXpzWQl7jDtOJ5+y6bQ1gL9Dtjdzx1Wdr2TBUm4AD7u2AQdonc79QCQZjnOQBjrUMO0N1sF5TG46oakNbLzs1gbObb1m2tU9xgkbgD8AG4czIRfL9QBWk1qdNpDQsFPBYivUDnui4+/CV1esssyLgiWfysQo4txnAHHBjj0rzoY5zOY+PNe/wA7A8+Gl9/j5SsnxG3stXJaD5QQBOdwImcfrW3otpZWIJ2fHguH+pHB2EbA/kPsVhAqeFg9yZUwM4xHyz0Fd6Wrw8OUy3SfTYIHrkVO1s9FOydVYL+aB6zn7DB4ParjeoeCNIGQSw4keXHb0nNXAAlSSTdWW8SDgcAAxEQQeZ5gHmf61Lm4VgLQ/wDmi2ulu2HEl2V0jKLkErBOOOnehJaCCSntd2C2Fk6q3fFv3n7qyozttdkYf4YMSojqO+aFpzWaJULCBJFkjd353uqZXyg568AYP+9N6p38iAgkbApt7BEW/eEF7m9/KHRQCQUJ4GxzgzlhUDGN3n0RQ46DnnijJ7+7bCqQE6ADH35NOdUqQII8EuWtN1fVaSzaQe9DB2Mo6ttCkDM4I69jUq1KJb2hB4b1TS8/T6rZ0vs1fZAYstIndct+cz323o+XpE5rC4vlbG0RGh58VzS6YmmXKySs9+xpMwU4TsUJ5c5mPKw/CZBn1kSIP5vSmZ+zCPNNk1p9TkkAARDHtPX0HpUY5KeyVpkJsBJZ8mAXwCQCfJyOOesDtTnBoAJv4rOAcx2abPfb3bPFNLvDPtRsg5wezeZ+COvPSjAdJgHneUshuUSRzayW1WhV1Enqw/MeZ8jLIJgk7S09M0LmBzRmO/j5R8o21Cwm1t/yNnhZJ2bQDkXHGxSf4jq8wDwVCnd/db9KEEAlrjI3nXngVqYQ6Dodyl78TBV0MhWUNtEnpvEqekH6GiIOSTcfbncfBU5tzCsEUiQZxnIGeuTx8s0ssAE6jh77ksypXUR0AxAwD8gd0giqDo0581RbOvPktbwJCbomBuQ/Ew49CTIOOD985x9JUnVcORoZGv5XY6BqdVjAdRB019F03jmpto7wS24KzW0JUsxRSfevghQcBB2Bxyec2j/sbcF6E4rK2GC9wCdBc6DaePhwWTf1TXFm5ttocpuYKnOStskLc6yQpbuTitjBI7LefsVya9RrDNR9+fEfZG8FsuXm3cDEiRG9QZiPjRVJM8HJngzSMbSrCkDxtu+PNa+isXh6lYt/8bgi8b98cRoiay0qOyyNkyqgElQwDAA9MEDmPSucS0GHER568fyvRMzObIBnSd8W5slvGlVtOuwFiLttYbnbsvbTAw0eYY6AYiur0dl7RaJtt/Gq8x+omO/xh0CSdN5idfA34rS091ltOyYJcoNo5hRggfENrvz2rlsqvLSW+g5nxXpH0mdY1rtAJv37N1wNELT6dSSSRbIV+TPQiYyVImc02hSDqoOh3a/0k4+uaeGcTcc+BWJ4bdBvO5DTsbbwAANoUA5mFET6V1OkS2lRGtiPfvXlugXOrY1zjqWu+49lv3bjA7AotpMAjykxEvtJl5OZGT3rlOrONnW47fX2XqqWHYBmFzu2d1tPGyjUaJ9qlj1Mu52DMBYDwx+Ht8ppRwtRwBueJt90397RY4gmDuFz6SNu/vWd4lcT3JG7d5kPlBAWNwhS0ESSMxExg10+j6fVuOYzbZ+V539QV+totygjtbdtjsH9rAMZKrPXzGWHcnoR6xXXt/ELyYnaq+/YDLADJgnHb4avtbbd/wAKZQhi4GaLas3oBifn0HzqBrSezJRQQJKsnvCJEIOCef1PlI+tNbTedBHr97eSkNGqh1tSNztcbqBJ+0RH3NEWUx9bpPmrBO5N6O6yYGnUSQCXX5Z2qJwD84qxVayzW89wVZhFyvasu5DOwiGm2rFdhzG4ZInBxzx1oXVXHgOHMqBzSRt536LJCOokICDbeTuGct5gTkEYGzk7fWkCo5hzDnxT2hrhHBC2KfitKf4W6feAHrD/ABfEJH8PnHFLeWvuUcEabt/r+F2Ps1ete6VFYMVGQcH6itVJwbEXWCqDJlZ/tWiSgLQ/mK4BXpO4H5dKXUgkX+EykSAdywLRIEAXDzlLjhDnkCMUoNG4+BK0Zhv+y6K5piBx9ekfKtECOKySub12nKMZ65FZHtgrSx0hBtkyMTkYPBzwfShEorKWaTOB2iDHoe9GLqRFlq6Uotu2N8OZYBrf8ImMgXdxg4BiI4mDmtDIETb7H252KnAEa/hEa+XYgiTkFS20DywTukwOscZHSjeCXH+tnP8ASz5Q0W+3FAvQEnkB2GCCOAQPNEcZYLHFJcAG33893krE5pjz5v5ph7wLXAUJY/iI3Nl1YBgp2tnsJEDJ4oy67red+N9iW1hgEHwFhuttH2SP7o6lWQfFuDeX+EfMyxMbYjpyDiAaBoc0gs2+XwnCq24cdPMe6FZEmFMNHwk8xMhWnPTB579zEP8Apsd2/u39xRkb0za1gIA+EgEYwScxk5GTkUMg2Fjz5dyAt3pnSF7TC5AHPxdQZBwM9+lJqUc7S11pT8PiHYaqKjRcbOdFsazxy0YZUZ2KqDu2hUKqFO34t8xPmAA7E8KpYcNs648ue5a8V0k54PUjKSTfXXnVZN93c7xn8zRLf42Ykj5zHQGtTnNY2RAHPeVz6VJ9Z2UAk87fldH7N+Husu8iYDu3wheY83xE9u8fOuJjq76vAbzt8/Rex6HwTMK0ucQah2DZwkep5L/ii23us2+Gba5TkEsitAuNG3nrIx9KxPDHGM1zs3+J09V2aOdjAIsJE9xOwTPp7rN8YhLSKEhvfW3becxtvBJ4AOGIH9oV0uj2hgdDfNeb6eqF9SkJkA7NNk+3itW/ea5aCtuY+9u5UZAC29sgQCPMeYPGa5bXurUwHSe740XpMgp1S5sCw14k+I07kld0bLbvGVg2rokGeFk4HBgHBjrWjA0DTrtLiI053eK5/TdbPgnhoM2+/r4SsLwfUqrEGWDIwAOF3dMAzOOQRzXaxeU09JvzzK8p0S6MRrBLSB32PtuXQ6vU3WJNokLCSFEMBtWJcZYRGSf6Vzw3awc969ECXCKhJ1108tAs0XFUkveVSZJg7yT6gY+5ohTfqbIDWo/TMxsGz2Hmk9Rr1YtbtWt0r5tzRwQ0qqkGJUfiNbaGGOaQL87NVx8djWPb1ZEjfPx8rKuBjBLKi9h5REcyfMT81roClUi5geX59FyCW7Fey+mA8yu5/MOv+fE+oiiHUNF78+SoZpRLxfePdoyATtaNxwBPnmB9DFWakGGN8dUOYbTz3aqv7ssbrjMw2SMhzO8LJWQu3PEzI5ilOJdqZ53aKOzfxHP39FoW1QEi2GYC5bEQJEK07lXAbJjJBzPchIi1+dyq83kacyj6bUsSuWAm6QoA7AwkdeSfQdTVZjopkEz3let6QFU+K2wRzlhgHfIHUqZgk9zg0WTwQ9YQNpts5996G+lEw5ckIADsUAAsCAwBMr5viwcx1xA0A3RFziB3d/Pqk/EvCQN3lA8iZ2OFDHYSRkwecnBBOJIoH0r3smNqRpuWZptIA0u+2PhMEz6bhgfWKKnAMuOnPMqOdIsEx4tZ86ruVm2yQ8FRJbndEEfWqf2nWjx0VMMD4WZ+7P8A/bc+qmR9DSurd/qU3MN4Xa3fDdScXGtWB2ZwXj0t29zfeKaXz9N/T7pQox9RAWRqfA7m5pdSoOG2mSO8Hj71eQoS5o0Wfr/Dtiyst3Pb6Cge2BZEx8m6SdFnEieC0QR/a7H1FBEc8+aaCiWtSV3KVlMb7bnrgT3mchlzTGv2RbaDz5EKyAbhRceDKkssGNwkrM4PRoiZoi8t2yOOxDYqtm+p+Mdo4yfUwcQc4zAoAWu+pRzSNEwdRliqAEyBtA6rM7pJBkTtGPtVFxa4wI/rff7qg0EXJPO4QiK9yFDAiHM+8kLyIjeRkGePN69KsdZYn108J9lRyaD019PdRc8PUhijFwGyAh3AZ/E20EYJwD6jFF+3mS2T4e5j0QCs4GHCOOw+F48fBJrdAkPkdHWJBzEn8Qqi4aVL8RqO/enRuT9jVErtdd6jAcfEJ6Buox8J46EVRa5onUb0ReH2f+R8jkQuj0fhGle37ybjldqsiQpkzliZIGOg/EK5tWpUp9omQdI0+V6GhgsNVY1rBBA7U6z3HSdRwTNi7atEe7tKhB+JmYsPmy7SR6GR6VjdjXTaG8+a6lPoqnF5cPCPhadi0boDXJVRhZi2j9gqcITiSuPkeUmma5zPtG+wPx4ei2Nc3DjLTuTuuR8gcbpfWWxacteYG4WJ90kzJMyWPwCY9SOMZq24XK7M8+XsTp3+SU/HAsyUhs1On5+dVieN+IjyIU3E/wAQljJG4kAARHCggRA3HHWu5hCAzTXm39LxfSzya8A/T6k3v6XmVv668rWFBuoCG3gM4UlWRQYQnkFRgd8YriVcLXcMsWm2wR7cxZezp47DscHkgSO8zr42OvndZdnxRLTHJckEFAD5gQQQZEkfIGm4fBvY7MXSeHuUnG4+hUpmmRY77emvososD5tNYXaCBuO+4c8GGxg446fWu8yi94k+y8d1lJjv8TZ43PwB5Iur0twib+qWABK7pI9BaT/UU79o1tyVT8RUf9bue4WSQa3uUWrRJj4rrrbVtoMkiQSOpz0oXPptIH4/KFrHG4BPf8D5UamxqRAZRbBwoTYqsTkCVJ3Egz1JHerFV8QOz6ep9kl4vceXwPdJWjaGLhJBk7kB3CBgBn5k44+opZc3+V/P7n4QEPP0279PT5Uv8JKJuXHmksymQTuVsDAjiPU1RmOxceZ8QdPKOKtp2O18h4Rr5+C9Z1F08E3AdxNsksByox0YSTK9D0zVMc8mRJ9efBW5rGjd6I62EP41ttAG1nmSBJIadqyR8Lx85pgaP5GD58+KWXO2CeOn39p7kw91Q5BWG95IJLKJnHlVhCQ2GB6UT4aYIPP380Ql15ETs59ke1riVWVEML3mU7DIVsFRAMYMHLYE5zWbN+PjahFLKBHHUk+W5euPtRCT5Tb8v8QwCzZwY+qx696DIYnYi1tw5/pRY8UAJCI9zCwg3PtAKmTIyDHGBkdgKtrtmqs0rzpz6oNzUXGDFnFkbVMFyWIEQscGRBAn8NGc20wOdigDe9IeX8Adj0Y4g9xEfrNBLNAJ4nn5UvtTWvO5xCo5gE22kRg5DgiDHSpJmAJ4Km6akcfwss37owpvIOigsQPQEc0nO8WBcOF07K06wV1Gj1YZZGO4rSDIlZCITR8URRDH7VMwVZSsnVeNIPhUkUBqAJjaZKxtVDElODnYTJHqp6H0pZE6eSc0xr5/KUL8A8dCOR6f7UHejjcpFwgz16Rx/t8qMOIMqQNFVwDPRu3T/agc0HTVWJCY0F2DtLFSSBujgGckzgTE0dOqW2QvYHK2xt7Rt7FpwZx8RmRTWyXGAOe+UMgBe90FMl2JBnydD/eP+lUQGmXO8vk/CmYnQeaZW9baTsRWEecndumfiWNs+oFGKlMm4E7/AJ2eMJWR7b5iRu+NvhKXW1cRjsBzOPwsPpilhtRjuyPDYUwVGOFyt/wfX+8EA7Ly8fmKgGVk4Zf7JrK6iJOS3BdnD4rNlmZG3b+RwOmxdD4VrraqxCW1uxhmkrM9CT5MTj9a5/UMaeyIPPku4cU6q0Bzvg87ildT4o+d91Unnbhj82HmbjqaOnhnnQJFTE0mjtu8Pxos+74tZC7FV7hHBPlA7xGY9K2NwZIgrn1ek6bTLNVnarVaiZlUJAyIGAAAJ5EAAVvbhXtENXGfiy8kxqr6DV2LQly9xiZZVPlbOQT1Bx9qU6iA/M5w8pK0UsVTp0crQ6TreB8r2n1Lkn93sKDMifM/zAwJGKqGbBJG/wCEf7mrl7IDQdyjWWrkAXrpkj4S0IvptXLH9PnS3137THPmrp4Yv+ok9yrbtacrA3cfGo2rMcMMs2e0Ug16RIBPjoPFaBgyPpAjcbnwKqbly2wgIqx8SqSGgfmywP1ouvcNgA3jQ+6vqATIM8Dr8FWRnuWnUjcCwaGmJyIDE+XBPH60dEOnSRx+UjFhj2iDBG7n7pd/D1EjcJ/JBLiOQrSAQf8AStfUsJsfDb7LjmpUbZzfHYlxe2f9MGRkbi0gnBhRAmPnigDsplguN+vsjLc4hxsdyK2sF1obyHoQYSQOqCBM5kR9anWh4yv9NPEIW0ur+j1189fNL3rcHzmZEhhEGTJJ/WgdTLYnRMa4OkoljWAIbZQOu6RjgQQQpOV74prHfxiRz5KOaNdDvVrNgwN91batPA3Ng9QOM1YGxzgPVS25NXNPbHwWzdAUfxHMLu77Rjtz2pvVgaCeJNlRcqPdbcW3rbEyBbwB22nsKS5zjYmyrbICC1y3P8NGZpMMYP1MihzNH0i/O9SDtKqrsWBYKGxgYn0ip9VzYqGBojeILJwBcECQPKynaBhuvHFWRv09VGablmjXXRgXGAHQjNJzv3puRp2Jn37RE4ojUdEJMKk0IVoo08iR9qf1QIzBVMINxI/oapwsrBS1wzzz/OlEpotohFqHMmQvMZq3OmyoCFZVk5zVROqhMCygEqY49KppcFIBCa07AzuJzz605gabuSnSNEU3VHwIPrmrNRos1qHKTqUWzrHYENJXoOAPlRMq1DbYgdSYDI1Vz4aR5w0dRnIq3YcOvKtmIcx1tVDeJ3CYADHE45ispEGCt1SuaoEo3vxcORknIHFaWuYBCTDnarTT94tL5Lahe8f600VnDQIXNO5ZF053XDOeKo1Ju8pEHQJnT6W28G2JPY0is9jW9gXWnBUH1Hf5NEe5duj+GilT12iMfMVy3VqkwF320GESUzb0gMNqBxwZz9adTYa31+aVWqNoDs+SFtKmVbyzgKOlOfhqdJhOqx0cVUrVBsutDVeI7FUKsTzuEzNc6niiwQAu7WwYe6SVmeM2t9uQSDunbOPtXQw7utmCuL0lT6qFgXLxmP60/NBhc0uzC6dtWHYYhiMgjkUwHMIN0rJBkJRLMzuaIoS2NUchQrrBBEnoSeKrMNil1VtVjbOJmPWhLybEqw0qbd/stMpva3QIXNRW1txhBaB2FW6u91iqgBWtWlPcn1qwGEcUJcVNwxifoKWbKl6ywkGKihVtPa33RMkTmOaoEzKYzcmbvigQlRaUgHkjP1op4I4aNiQAoA1JRFtetObRG1VKKjKBRjI1VcpO8c0h5umNCA2aWUwWQWoEYUA1YKtWXnFEAqK9dMmo4So2wXloYhQpzSvFaKURKQ8XTNt2uMFUULqjtiKnTzuAXRWfZS6g95dYbe0zHzrM2o+ZldT9i1o0Tlrw2yw8olqdLHC+qoUSw6JTV+GXLYhUkniOazVHlmgWplNpV9CNSTsZSB1nH86pld5sUTsO1F8W9kwy7wwB5jkGt1OiHXlcbFjI6wVPCNGlnzMIIwJ61hruFN112cFRmmtO34zabcCgn1HPypba4qWWp1Hq7rnvEtO7kkN5e3/Oae5pYLLlu/yuS2lue7YZmDxVdYSIQsphr5K1/afxNLyoEUKwjPoKU7DB11vfjy0WXN3WPDNitNKmKei5OKrmrqs++4nFNL1jAUaXWvbmOtC2oWoy2UJnZjPequ5SAFHuj1qiwjVTMFcIBVgIZJUh6IKZVKsaiogI9sGjSzCOsDmjaYQqWINU4gqIOn1JtvI+tLBgpzSnTr7Zyy5PNNzhHZZxalykwrW5JiiBJMKoCcuaGBu6U40oEoMyTvCkOEI2pRxSSnBDJqkxRFRRSpzVyqIlTcarlRoXhVlQq4aKgcQhiUxodYUYN2qs1oRM7LwV3dvxttQmxsCOnX51lNNzjZdwYluVWcragjnoOlPp4cC5WOriCdF0PsV46j3gjqB04mtDntDYQYcPe9bPtnoxt95ZABHIOAf9KwVN7V2KAJEPXzi94lcHJ4OV6VVGs8LLjKLCQukt+IWH0vwzI6jINHUAqBOo1BTaFwWtvQ23jmkU6MFJxOLkQl11bDrIrpNAIgrjdcWmyXuX4YGgcGhQOc4quq1hxHSlF52Jxak7t4tzVglKfCGE60UJcq+8VFUKBdjirDiNFMk6qd5NHmLlIAVxaq8iDPdegCqhXcqwarVQj22owllE5q0KFdoHFEEmz0lPAVw4poIQ5Sv/2Q==">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUtAHqSa5uTtQHA9XeKSnA1Pgkx4wMFJhPfA&s">
+        </div>
+        <div class="s4">
+          <img src="data:image/jpeg;base64,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">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEavpUjyTsDNaTYnl7e3KX2ShZRNbc8mUCAQ&s">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1T4JimEZBbMs0ndLrzccKCoupKlgXFlJ3Ew&s">
+        </div>
+      </div>
+
+
+      <div style="border: 1px solid;border-radius: 10px;display: flex;margin: 10px;">
+      <div>
+        <img src="https://www.xorlogics.com/wp-content/uploads/2019/06/What-New-Services-Will-5G-Enable.png"style="height:600px;width:600px">
+      </div>
+      <div style="margin-top: 120px;margin-left: 20px;">
+        <h2 style="color:blueviolet;">Uses of 5g</h2>
+        <p style="color:olivedrab;margin-top: 10px;font-size: 20px;">5G is designed to increase transmission speed, increase network capacity, and reduce latency. These advanced capabilities have huge potential for industries such as the following:</p>
+        <ul style="color:red">
+          <li>Healthcare</li>
+          <li>Education</li>
+          <li>Entertainment</li>
+          <li>Industrial Internet of Things (IoT)</li>
+          <li>Autonomous Vehicles</li>
+          <li>Smart Cities</li>
+        </ul>
+
+      </div>
+      </div>
+
+      <div style="border: 1px solid;border-radius: 10px;margin: 20px;">
+        <h2 style="margin-left: 30px;color: brown;">5G – Architecture</h2>
+        
+        <p style="margin-left: 30px;font-size: 20px;color:yellowgreen;">Architecture of 5G is highly advanced, its network elements and various terminals are characteristically upgraded to afford a new situation. Likewise, service providers can implement the advance technology to adopt the value-added services easily.</p>
+        <p style="margin-left: 30px;font-size: 20px;color:yellowgreen;">However, upgradeability is based upon cognitive radio technology that includes various significant features such as ability of devices to identify their geographical location as well as weather, temperature, etc. Cognitive radio technology acts as a transceiver (beam) that perceptively can catch and respond radio signals in its operating environment. Further, it promptly distinguishes the changes in its environment and hence respond accordingly to provide uninterrupted quality service.</p>
+        <h4 style="margin-left: 30px;font-size: 20px;color:brown">
+          Architecture of 5G
+        </h4>
+        <center><img src="http://www.techplayon.com/wp-content/uploads/2017/05/5G-Reference-Architeture.png"></center>
+      </div>
+     
+      <div style="border: 1px solid;border-radius: 10px;margin: 20px;">
+        <h2 style="color:green;margin-left: 20px;">5G - Future Scope</h2>
+        <p style="color:purple;margin-left: 20px;font-size: 20px;">Several researches and discussions are going on across the world among technologists, researchers, academicians, vendors, operators, and governments about the innovations, implementation, viability, and security concerns of 5G.</p>
+        <p style="color:purple;margin-left: 20px;font-size: 20px;">As proposed, loaded with multiple advance features starting from the super high speed internet service to smooth ubiquitous service, 5G will unlock many of the problems. However, the question is — in a situation, where the previous technologies (4G and 3G) are still under process and in many parts yet to be started; what will be the future of 5G?</p>
+        <center><img src="data:image/jpeg;base64,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"></center>
+        <p style="color:purple;font-size: 20px;">5th generation technology is designed to provide incredible and remarkable data capabilities, unhindered call volumes, and immeasurable data broadcast within the latest mobile operating system. Hence, it is more intelligent technology, which will interconnect the entire world without limits. Likewise, our world would have universal and uninterrupted access to information, communication, and entertainment that will open a new dimension to our lives and will change our life style meaningfully.</p>
+        <p style="color:purple;font-size: 20px;">Moreover, governments and regulators can use this technology as an opportunity for the good governance and can create healthier environments, which will definitely encourage continuing investment in 5G, the next generation technology.</p>
+
+      </div>
+      <div>
+        <div style="border: 1px solid;border-radius: 10px;margin: 20px;">
+          <h2 style="margin: 20px;color:green">5G - Challenges</h2>
+          <p style="margin: 20px;color:purple;font-size: 20px;">Challenges are the inherent part of the new development; so, like all technologies, 5G has also big challenges to deal with. As we see past i.e. development of radio technology, we find very fast growth. Starting from 1G to 5G, the journey is merely of about 40 years old (Considering 1G in 1980s and 5G in 2020s). However, in this journey, the common challenges that we observed are lack of infrastructure, research methodology, and cost.</p>
+       
+          <center><img src="https://www.researchgate.net/publication/331969917/figure/fig9/AS:962226605268994@1606424108025/5G-network-security-challenges.png"></center>
+          <p style="margin: 20px;color:purple;font-size: 20px;">Still, there are dozens of countries using 2G and 3G technologies and don’t know even about 4G, in such a condition, the most significant questions in everyone’s mind are −</p>
+          <ul style="color:purple;font-size: 20px;">
+            <li>	How far will 5G be viable?</li>
+            <li>	Will it be the technology of some of the developed countries or developing countries will also get benefit of this?</li>
+          </ul>
+        
+        </div>
+
+        <div style="border: 1px solid;border-radius: 10px;margin: 20px;">
+          <h2 style="margin: 30px;color:green">Technological Challenges</h2>
+          <p style="margin: 30px;font-size: 20px;color:purple">•	Inter-cell Interference − This is one of the major technological issues that need to be solved. There is variations in size of traditional macro cells and concurrent small cells that will lead to interference.</p>
+          <center><img src="https://www.tutorialspoint.com/5g/images/technological_challenges.jpg"></center>
+        <p style="margin: 30px;font-size: 20px;color:purple;">•	Efficient Medium Access Control − In a situation, where dense deployment of access points and user terminals are required, the user throughput will be low, latency will be high, and hotspots will not be competent to cellular technology to provide high throughput. It needs to be researched properly to optimize the technology.</p>
+        <p style="margin: 30px;font-size: 20px;color: purple;">•	Traffic Management − In comparison to the traditional human to human traffic in cellular networks, a great number of Machine to Machine (M2M) devices in a cell may cause serious system challenges i.e. radio access network (RAN) challenges, which will cause overload and congestion.</p>
+        <h4 style="margin: 30px;color:green">Common Challenges</h4>
+        <p style="margin: 30px;font-size: 20px;color: purple;">•	Multiple Services − Unlike other radio signal services, 5G would have a huge task to offer services to heterogeneous networks, technologies, and devices operating in different geographic regions. So, the challenge is of standardization to provide dynamic, universal, user-centric, and data-rich wireless services to fulfil the high expectation of people.</p>
+        <p style="margin: 30px;font-size: 20px;color: purple;">•	Infrastructure − Researchers are facing technological challenges of standardization and application of 5G services.</p>
+        <p style="margin: 30px;font-size: 20px;color: purple;">•	Communication, Navigation, & Sensing − These services largely depend upon the availability of radio spectrum, through which signals are transmitted. Though 5G technology has strong computational power to process the huge volume of data coming from different and distinct sources, but it needs larger infrastructure support</p>
+        <p style="margin: 30px;font-size: 20px;color: purple;">•	Security and Privacy − This is one of the most important challenges that 5G needs to ensure the protection of personal data. 5G will have to define the uncertainties related to security threats including trust, privacy, cybersecurity, which are growing across the globe.</p>
+        <p style="margin: 30px;font-size: 20px;color: purple;">•	Legislation of Cyberlaw − Cybercrime and other fraud may also increase with the high speed and ubiquitous 5G technology. Therefore, legislation of the Cyberlaw is also an imperative issue, which largely is governmental and political (national as well as international issue) in nature.</p>
+        </div>
+
+        <div style="border: 1px solid;border-radius: 10px;margin: 20px;">
+          <h2 style="margin: 30px;color:green">5G - Time Period Required</h2>
+          <p style="margin: 30px;font-size: 20px;color: purple;">Normally, it is expected that the time period required for the 5G technology development and its implementation is about five years more from now (by 2020). But to becoming usable for the common people in developing countries, it could be even more.</p>
+          <center><img src="https://media.springernature.com/m685/springer-static/image/art%3A10.1007%2Fs12652-020-02521-x/MediaObjects/12652_2020_2521_Fig1_HTML.png"></center>
+          <h4 style="margin: 30px;color:green">Expected Time Length</h4>
+          <p style="margin: 30px;font-size: 20px;color: purple;">By considering the multiple utility and various fashionable salient features, researchers are anticipating that this technology will be in use until 2040s.</p>
+        </div>
+
+        <div style="border: 1px solid;border-radius: 10px;margin: 20px;">
+          <h2 style="margin: 30px;color:green">Conclusion on 5g network</h2>
+          <p style="margin: 30px;font-size: 20px;color: purple;">AWS believes this methodology for deploying 5G will allow Digital Service Providers (DSPs) to harness the power of a cloud native network. This will enable DSPs to operate with speed, efficiency and automation not yet seen in the industry today. </p>
+          <p style="margin: 30px;font-size: 20px;color: purple;">This one of a kind 5G Network build allows for monetization opportunities as well as allowing DSPs the ability to provide their customers the reliability and flexibility required in today’s market.</p>
+          <p style="margin: 30px;font-size: 20px;color: purple;">Deploying a cloud native network allows DSPs the ability to respond on-demand to customers wireless needs and growth. This provides business agility and a significant competitive advantage from a time to market perspective by deploying 4-6X faster than traditional deployment.</p>
+          <p style="margin: 30px;font-size: 20px;color: purple;">This cloud native network will simplify the process for developers to create new 5G applications. This will allow developers, customers as well as partners to create innovative 5G solutions for customers by leveraging AWS APIs.</p>
+          <p style="margin: 30px;font-size: 20px;color: purple;">AWS is unlocking the potential of 5G and powering business outcome by co-innovating and enabling cloud-based, end-to-end 5G networks that deliver consistent, cost- effective performance from core to the edge, offering their customers on-demand control of their wireless needs.</p>
+          <p style="margin: 30px;font-size: 20px;color: purple;">This methodology promotes faster development cycles and a short time to value for end customers to deploy new innovative services in minutes, not days.</p>
+        </div>
+      
+
+        <footer style="height:200px;width:100%;border:1px solid;background-color: black;">
+          <div style="display:flex;">
+            <div>
+          <p style="color:white;margin-top: 50px;padding-left: 20px;">
+            Terms & Conditions | Privacy Policy | Copyright Policy | Hyperlinking Policy | Accessibility |Help | Sitemap | Contact Us | Web Information Manager/CIO
+  
+          </p>
+          <p style="color:white;margin-top: 50px;padding-left: 20px;">Website hosted by National Informatics Centre. Website Content provided by the President's Secretariat.</p>
+        </div>
+        <div style="margin-left: 20px;">
+  
+         
+          <i class="fa-brands fa-facebook" style="color:white"></i>
+          <i class="fa-brands fa-instagram" style="color:white"></i>
+          <i class="fa-brands fa-square-youtube" style="color:white"></i>
+        </div>
+          </div>
+        </footer>
+  
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
